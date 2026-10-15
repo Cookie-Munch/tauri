@@ -36,7 +36,7 @@ export interface ConsentApiClient {
 }
 
 export interface ConsentApiClientOptions {
-  /** API origin, e.g. "https://cmp.example.com". `/api/v1/consent` is appended. */
+  /** API origin, "https://api.cookiemunch.net". `/api/v1/consent` is appended. */
   baseUrl: string;
   /**
    * Optional Developer API key. When present it is sent as a Bearer token. The public

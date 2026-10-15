@@ -39,7 +39,7 @@ import { createConsentManager } from '@cookiemunch/tauri';
 const consent = createConsentManager({
   apiKey: 'fck_…',                  // optional; sent as a Bearer token on ledger writes
   cbid: 'YOUR_SITE_ID',            // your Cookie Munch site id
-  baseUrl: 'https://cmp.example.com', // omit to disable ledger sync
+  baseUrl: 'https://api.cookiemunch.net', // omit to disable ledger sync
   region: 'gb',
   // storage defaults to localStorageStore() (the webview's localStorage)
 });
@@ -87,7 +87,7 @@ import { createConsentManager, tauriStoreStore } from '@cookiemunch/tauri';
 
 const consent = createConsentManager({
   cbid: 'YOUR_SITE_ID',
-  baseUrl: 'https://cmp.example.com',
+  baseUrl: 'https://api.cookiemunch.net',
   storage: tauriStoreStore({ path: 'cookiemunch.json', key: 'consent' }),
 });
 ```
@@ -124,7 +124,7 @@ The full typed Developer API client is re-exported for in-app dashboards:
 ```ts
 import { createCookieMunch } from '@cookiemunch/tauri';
 
-const cm = createCookieMunch({ apiKey: 'fck_…', baseUrl: 'https://cmp.example.com' });
+const cm = createCookieMunch({ apiKey: 'fck_…', baseUrl: 'https://api.cookiemunch.net' });
 const stats = await cm.consent.stats('YOUR_SITE_ID');
 ```
 
@@ -135,7 +135,7 @@ Cookie Munch web embed **`consent.js`** in your `index.html` exactly as you woul
 website:
 
 ```html
-<script id="CookieConsent" src="https://cmp.example.com/consent.js" data-cbid="YOUR_SITE_ID" async></script>
+<script id="CookieConsent" src="https://cdn.cookiemunch.net/consent.js" data-cbid="YOUR_SITE_ID" async></script>
 ```
 
 That gives you the full banner UI and DOM-level prior-blocking (rewriting `<script>` tags)

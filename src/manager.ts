@@ -25,7 +25,7 @@ export interface ConsentManagerOptions {
    * ingest endpoint does not require it; omit it for a browser-only webview.
    */
   apiKey?: string;
-  /** API origin for the ledger, e.g. "https://cmp.example.com". Omit to disable sync. */
+  /** API origin for the ledger, "https://api.cookiemunch.net". Omit to disable sync. */
   baseUrl?: string;
   /** A custom API client. Overrides `baseUrl`/`apiKey`. Injectable for tests. */
   client?: ConsentApiClient;
